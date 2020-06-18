@@ -6,25 +6,26 @@ class Tabs extends React.Component {
                             content : ''   
                      };
 
+/****************************************************/
+/* start back at "Making the buttons work" on mod 11*/
+/****************************************************/
 
-
-    
-
-
+   renderButtons = () => this.props.tabs.map( (tab,i) => ( <button key={i}>{tab.name}</button> ) )
+   
+   renderContent = () => { 
+       const currentTab =this.props.tabs[0];
+                   return(
+                      <div className="content">
+                        {currentTab.content}
+                    </div>
+                   )
+                    
+   }
     render() {
-        const buttons = this.props.tabs.map((tab,i) =>
-            <button key={i}>{tab.name}</button>
-        )
-        const currentTab =this.props.tabs[0];
         return (
             <div>
-                {buttons}
-                {
-                    this.props.tabs.length ? 
-                    <div className="content">
-                        {currentTab.content}
-                    </div> : '' 
-                }
+                {this.renderButtons()}
+                {this.props.tabs.length ? this.renderContent() : ''}
             </div>
         )
     }
