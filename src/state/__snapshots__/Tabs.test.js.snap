@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs Component renders the first tab by default 1`] = `
+<div>
+  <button>
+    Steve Jobs
+  </button>
+  <button>
+    died from 
+  </button>
+  <button>
+    ligma
+  </button>
+  <div
+    className="content"
+  >
+    why
+  </div>
+</div>
+`;
